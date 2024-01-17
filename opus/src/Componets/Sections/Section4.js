@@ -19,39 +19,44 @@ function Section4() {
   return (
     <>
       {/* BOX1====================================================================================================================== */}
-      <Box display={"flex"} margin={5}>
+      <Box display={"flex"} sx={{ m: 5, ml: 10 }}>
         <Stack direction={{ xs: "column", md: "row" }} spacing={4}>
           <Grid>
-            <Box display={"flex"}>
-              <IconButton sx={{ marginBottom: 30, background: "blue" }}>
+            <Box display={"flex"} sx={{ height: "40%", margin: 5 }}>
+              <IconButton
+                sx={{
+                  marginBottom: 20,
+                  background: "blue",
+                }}
+              >
                 <SendIcon />
               </IconButton>
-              <Box>
+              <Box sx={{ width: "80%" }}>
                 <Typography
-                  width={"20%"}
+                  width={"40%"}
                   sx={{
                     color: " #061237",
                     fontFamily: "Inter",
                     fontSize: "24px",
                     fontStyle: "normal",
                     fontWeight: 700,
-                    lineHeight: "25px" /* 200% */,
-                    letterSpacing: "1.5px",
+                    lineHeight: "20px" /* 200% */,
+                    letterSpacing: "1px",
                     margin: 1,
                   }}
                 >
                   Choose your sections
                 </Typography>
                 <Typography
-                  width={"40%"}
+                  width={"90%"}
                   sx={{
                     color: " #061237",
                     fontFamily: "Inter",
                     fontSize: "14px",
                     fontStyle: "normal",
                     fontWeight: 400,
-                    lineHeight: "22px" /* 200% */,
-                    letterSpacing: "1.5px",
+                    lineHeight: "20px" /* 200% */,
+                    letterSpacing: "1px",
                     margin: 1,
                   }}
                 >
@@ -61,36 +66,36 @@ function Section4() {
               </Box>
             </Box>
             <Grid>
-              <Box display={"flex"}>
-                <IconButton sx={{ marginBottom: 30, background: "blue" }}>
+              <Box display={"flex"} sx={{ height: "20%", margin: 5 }}>
+                <IconButton sx={{ marginBottom: 20, background: "blue" }}>
                   <ImageIcon />
                 </IconButton>
-                <Box>
+                <Box sx={{ width: "80%" }}>
                   <Typography
-                    width={"40%"}
+                    width={"45%"}
                     sx={{
                       color: " #061237",
                       fontFamily: "Inter",
                       fontSize: "24px",
                       fontStyle: "normal",
                       fontWeight: 700,
-                      lineHeight: "25px" /* 200% */,
-                      letterSpacing: "1.5px",
+                      lineHeight: "24px" /* 200% */,
+                      letterSpacing: "1px",
                       margin: 1,
                     }}
                   >
                     Add the images and text you need
                   </Typography>
                   <Typography
-                    width={"40%"}
+                    width={"90%"}
                     sx={{
                       color: " #061237",
                       fontFamily: "Inter",
                       fontSize: "14px",
                       fontStyle: "normal",
                       fontWeight: 400,
-                      lineHeight: "22px" /* 200% */,
-                      letterSpacing: "1.5px",
+                      lineHeight: "20px" /* 200% */,
+                      letterSpacing: "1px",
 
                       margin: 1,
                     }}
@@ -102,10 +107,10 @@ function Section4() {
               </Box>
             </Grid>
           </Grid>
-          <Grid>
+          <Grid sx={{ height: "80%", width: "80%" }}>
             <Grid>
               <Typography
-                width={"40%"}
+                width={"70%"}
                 sx={{
                   color: " #061237",
                   fontFamily: "Inter",
@@ -113,8 +118,8 @@ function Section4() {
                   fontStyle: "normal",
                   fontWeight: 400,
                   lineHeight: "45px" /* 200% */,
-                  letterSpacing: "1.5px",
-                  margin: 1,
+                  letterSpacing: "1px",
+                  margin: 5,
                 }}
               >
                 Create pages using beautiful components.
@@ -122,7 +127,7 @@ function Section4() {
             </Grid>
             <Grid>
               <Typography
-                width={"30%"}
+                width={"50%"}
                 sx={{
                   color: " #37456C",
                   fontFamily: "Inter",
@@ -130,8 +135,8 @@ function Section4() {
                   fontStyle: "normal",
                   fontWeight: 400,
                   lineHeight: "20px" /* 200% */,
-                  letterSpacing: "1.5px",
-                  margin: 1,
+                  letterSpacing: "1px",
+                  margin: 5,
                   padding: 4,
                 }}
               >
@@ -154,8 +159,10 @@ function Section4() {
       <Box
         sx={{
           display: { xs: "contents", md: "flex" },
-          justifyContent: "space-around",
+          justifyContent: "space-between",
           margin: 5,
+          width: "80%",
+          ml: 12,
         }}
       >
         <Stack direction={{ xs: "column", md: "row" }} spacing={2}>
@@ -164,13 +171,14 @@ function Section4() {
               <Stack>
                 <Typography
                   sx={{
+                    width: "20%",
                     color: " #67718E",
                     fontFamily: "Inter",
                     fontSize: "14px",
                     fontStyle: "normal",
                     fontWeight: 700,
-                    lineHeight: "24px" /* 200% */,
-                    letterSpacing: "1.5px",
+                    lineHeight: "20px" /* 200% */,
+                    letterSpacing: "1px",
                     textTransform: "uppercase",
                     margin: 1,
                   }}
@@ -179,15 +187,15 @@ function Section4() {
                 </Typography>
                 <Typography
                   sx={{
+                    width: "50%",
                     color: " #061237",
                     fontFamily: "Inter",
                     fontSize: "48px",
                     fontStyle: "normal",
                     fontWeight: 700,
-                    lineHeight: "56px" /* 200% */,
-                    letterSpacing: "1.5px",
+                    lineHeight: "45px" /* 200% */,
+                    letterSpacing: "1px",
                     margin: 1,
-                    width: "70%",
                   }}
                 >
                   You<sup>'</sup>re not just doing business. You<sup>'</sup>re
@@ -204,8 +212,8 @@ function Section4() {
                       fontSize: "16px",
                       fontStyle: "normal",
                       fontWeight: 700,
-                      lineHeight: "32px" /* 200% */,
-                      letterSpacing: "1.5px",
+                      lineHeight: "30px" /* 200% */,
+                      letterSpacing: "1px",
                       margin: 1,
                     }}
                   >
@@ -223,8 +231,8 @@ function Section4() {
                       fontSize: "16px",
                       fontStyle: "normal",
                       fontWeight: 700,
-                      lineHeight: "32px" /* 200% */,
-                      letterSpacing: "1.5px",
+                      lineHeight: "30px" /* 200% */,
+                      letterSpacing: "1px",
                       margin: 1,
                     }}
                   >
@@ -242,8 +250,8 @@ function Section4() {
                       fontSize: "16px",
                       fontStyle: "normal",
                       fontWeight: 700,
-                      lineHeight: "32px" /* 200% */,
-                      letterSpacing: "1.5px",
+                      lineHeight: "30px" /* 200% */,
+                      letterSpacing: "1px",
                       margin: 1,
                     }}
                   >
@@ -255,7 +263,11 @@ function Section4() {
           </Grid>
         </Stack>
         <Box>
-          <img src={Image2} alt="image" style={{ height: "70%" }} />
+          <img
+            src={Image2}
+            alt="image"
+            style={{ height: "100%", width: "80%" }}
+          />
         </Box>
       </Box>
 
@@ -263,25 +275,32 @@ function Section4() {
       <Box
         sx={{
           display: { xs: "contents", md: "flex" },
-          justifyContent: "space-around",
+          justifyContent: "space-between",
           m: 5,
+          width: "75%",
+          ml: 20,
         }}
       >
         <Box>
-          <img src={Image2} alt="image" style={{ height: "70%" }} />
+          <img
+            src={Image2}
+            alt="image"
+            style={{ height: "100%", width: "80%" }}
+          />
         </Box>
         <Stack direction={{ xs: "column", md: "row" }} spacing={2}>
           <Grid>
             <Box>
               <Typography
                 sx={{
+                  width: "20%",
                   color: " #67718E",
                   fontFamily: "Inter",
                   fontSize: "14px",
                   fontStyle: "normal",
                   fontWeight: 700,
-                  lineHeight: "32px" /* 200% */,
-                  letterSpacing: "1.5px",
+                  lineHeight: "30px" /* 200% */,
+                  letterSpacing: "1px",
                   textTransform: "uppercase",
                   margin: 1,
                 }}
@@ -295,10 +314,10 @@ function Section4() {
                   fontSize: "48px",
                   fontStyle: "normal",
                   fontWeight: 700,
-                  lineHeight: "56px" /* 200% */,
-                  letterSpacing: "1.5px",
+                  lineHeight: "50px" /* 200% */,
+                  letterSpacing: "1px",
                   margin: 1,
-                  width: "70%",
+                  width: "60%",
                 }}
               >
                 A UI Kit that's Modern & Elegant
@@ -307,13 +326,14 @@ function Section4() {
               <Typography
                 width={"50%"}
                 sx={{
+                  width: "50%",
                   color: " #37456C",
                   fontFamily: "Inter",
                   fontSize: "16px",
                   fontStyle: "normal",
                   fontWeight: 700,
-                  lineHeight: "32px" /* 200% */,
-                  letterSpacing: "1.5px",
+                  lineHeight: "30px" /* 200% */,
+                  letterSpacing: "1px",
                   margin: 1,
                 }}
               >
@@ -328,28 +348,34 @@ function Section4() {
       <Box
         sx={{
           display: { xs: "contents", md: "flex" },
-          justifyContent: "space-around",
+          justifyContent: "space-between",
           m: 5,
+          ml: 30,
+          width: "75%",
         }}
       >
-        <Stack direction={{ xs: "column", md: "row" }} spacing={2}>
+        <Stack direction={{ xs: "column", md: "row" }}>
           <Grid>
             <Box>
               <Box>
-                <img src={Logo2} alt="logo" />
+                <img
+                  src={Logo2}
+                  alt="logo"
+                  style={{ height: "50%", width: "30%" }}
+                />
               </Box>
               <Typography
-                width={"50%"}
                 sx={{
                   color: " #333",
                   fontFamily: "Inter",
                   fontSize: "24px",
                   fontStyle: "normal",
                   fontWeight: 700,
-                  lineHeight: "32px" /* 200% */,
-                  letterSpacing: "1.5px",
+                  lineHeight: "30px" /* 200% */,
+                  letterSpacing: "1px",
                   margin: 1,
-                  width: "50%",
+                  width: "60%",
+                  alignContent: "center",
                 }}
               >
                 The Opus UI Kit lets you showcase your work in style. It's
@@ -357,13 +383,14 @@ function Section4() {
               </Typography>
               <Typography
                 sx={{
+                  width: "20%",
                   color: " #061237",
                   fontFamily: "Inter",
                   fontSize: "16px",
                   fontStyle: "normal",
                   fontWeight: 700,
-                  lineHeight: "24px" /* 200% */,
-                  letterSpacing: "1.5px",
+                  lineHeight: "20px" /* 200% */,
+                  letterSpacing: "1px",
                   margin: 1,
                 }}
               >
@@ -371,13 +398,14 @@ function Section4() {
               </Typography>
               <Typography
                 sx={{
+                  width: "20%",
                   color: " #1355FF",
                   fontFamily: "Inter",
                   fontSize: "12px",
                   fontStyle: "normal",
                   fontWeight: 700,
-                  lineHeight: "24px" /* 200% */,
-                  letterSpacing: "1.5px",
+                  lineHeight: "20px" /* 200% */,
+                  letterSpacing: "1px",
                   margin: 1,
                 }}
               >
@@ -408,7 +436,11 @@ function Section4() {
         </Stack>
 
         <Box>
-          <img src={Image2} alt="image" style={{ height: "70%" }} />
+          <img
+            src={Image2}
+            alt="image"
+            style={{ height: "100%", width: "90%" }}
+          />
         </Box>
       </Box>
     </>

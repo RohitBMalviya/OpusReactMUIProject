@@ -49,14 +49,14 @@ function Footer() {
 
   return (
     <>
-      <Box sx={{ margin: 3 }}>
+      <Box sx={{ margin: 4, ml: 10 }}>
         <IconButton>
           <img src={Logo} alt="Logo" />
         </IconButton>
       </Box>
       <Box
         display={{ xs: "block", md: "flex" }}
-        sx={{ margin: 5, justifyContent: "space-between" }}
+        sx={{ margin: 5, justifyContent: "space-between", ml: 12 }}
       >
         <Stack mr={15}>
           <Typography
@@ -258,7 +258,7 @@ function Footer() {
       <Stack
         direction={"row"}
         spacing={2}
-        sx={{ margin: 5, justifyContent: "flex-start" }}
+        sx={{ margin: 5, justifyContent: "flex-start", ml: 12 }}
       >
         <Typography>Style Guide</Typography>
         <Typography>Licence</Typography>

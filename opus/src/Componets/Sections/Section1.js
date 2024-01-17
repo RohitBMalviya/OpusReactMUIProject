@@ -1,19 +1,26 @@
-import { Box, Grid, Stack, Typography } from "@mui/material";
+import { Box, Grid, IconButton, Stack, Typography } from "@mui/material";
 import React from "react";
+import Logo3 from "../Images/Logo3.svg";
+import Logo4 from "../Images/Logo4.svg";
+import Logo5 from "../Images/Logo5.svg";
+import Logo6 from "../Images/Logo6.svg";
+import { Button } from "antd";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import Image4 from "../Images/Image4.png";
 
 function Section1() {
   const Logo = [
     {
-      Logo: "url",
+      Logo: Logo3,
     },
     {
-      Logo: "url",
+      Logo: Logo4,
     },
     {
-      Logo: "url",
+      Logo: Logo5,
     },
     {
-      Logo: "url",
+      Logo: Logo6,
     },
   ];
   const Info = [
@@ -40,9 +47,143 @@ function Section1() {
   ];
   return (
     <>
-      <Box sx={{ background: "darkblue", height: "600px" }}>Section1</Box>
-      <Box>
-        <Typography>
+      <Box sx={{ background: "rgba(24, 38, 78, 1)", height: "600px", mt: 8 }}>
+        <Box display={"flex"} sx={{ m: 5 }}>
+          <Box sx={{ width: "50%" }}>
+            <Typography
+              sx={{
+                color: " #FFF",
+                fontFamily: "Inter",
+                fontSize: "64px",
+                fontStyle: "normal",
+                fontWeight: 700,
+                lineHeight: "68px" /* 200% */,
+                margin: 1,
+                width: "40%",
+              }}
+            >
+              Built for
+            </Typography>
+            <Typography
+              sx={{
+                width: "50%",
+                color: " #FFF",
+                fontFamily: "Inter",
+                fontSize: "64px",
+                fontStyle: "normal",
+                fontWeight: 700,
+                lineHeight: "68px" /* 200% */,
+                margin: 1,
+              }}
+            >
+              enterprise
+            </Typography>
+            <Typography
+              sx={{
+                width: "50%",
+                color: " #FFF",
+                fontFamily: "Inter",
+                fontSize: "64px",
+                fontStyle: "normal",
+                fontWeight: 700,
+                lineHeight: "68px" /* 200% */,
+                margin: 1,
+              }}
+            >
+              businesses.
+            </Typography>
+            <Typography
+              sx={{
+                color: " #FFF",
+                fontFamily: "Inter",
+                fontSize: "18px",
+                fontStyle: "normal",
+                fontWeight: 700,
+                lineHeight: "36px" /* 200% */,
+                margin: 1,
+                width: "60%",
+              }}
+            >
+              Opus includes everything you need to build a beautiful website for
+              your business. Built to perform and look good doing so.
+            </Typography>
+            <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
+              <Grid sx={{ mr: 6 }}>
+                <Button type="primary" size="large">
+                  Learn More
+                </Button>
+              </Grid>
+              <Grid>
+                <IconButton sx={{ color: "white" }}>
+                  Explore Pages
+                  <ArrowForwardIcon />
+                </IconButton>
+              </Grid>
+            </Box>
+          </Box>
+          <Box>
+            <img src={Image4} alt="image" />
+            <Box sx={{ display: "contents", justifyContent: "center" }}>
+              <Typography
+                sx={{
+                  color: " #37456C",
+                  fontFamily: "Inter",
+                  fontSize: "13px",
+                  fontStyle: "normal",
+                  fontWeight: 700,
+                  lineHeight: "25px" /* 200% */,
+                  margin: 1,
+                  width: "30%",
+                }}
+              >
+                I felt like I couldn’t grow until I moved to Opus. Now I am
+                encouraged to sell more with them.
+              </Typography>
+              <Typography
+                sx={{
+                  color: " #333",
+                  fontFamily: "Inter",
+                  fontSize: "24px",
+                  fontStyle: "normal",
+                  fontWeight: 700,
+                  lineHeight: "32px" /* 200% */,
+                  margin: 1,
+                  width: "40%",
+                }}
+              >
+                Frank Dublin
+              </Typography>
+              <Typography
+                sx={{
+                  color: " #67718E",
+                  fontFamily: "Inter",
+                  fontSize: "16px",
+                  fontStyle: "normal",
+                  fontWeight: 700,
+                  lineHeight: "24px" /* 200% */,
+                  margin: 1,
+                  width: "40%",
+                }}
+              >
+                CEO @stamps
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+      <Box sx={{ m: 5, ml: 12 }}>
+        <Typography
+          sx={{
+            color: " #061237",
+            fontFamily: "Inter",
+            fontSize: "32px",
+            fontStyle: "normal",
+            fontWeight: 700,
+            lineHeight: "48px" /* 200% */,
+            margin: 1,
+            ml: 12,
+          }}
+        >
           Trusted and loved by the world<sup>'</sup>s best teams
         </Typography>
         <Stack direction={{ xs: "column", md: "row" }}>
@@ -54,15 +195,50 @@ function Section1() {
         </Stack>
         <Stack direction={{ xs: "column", md: "row" }}>
           {Info.map((items, index) => (
-            <Grid key={index}>
-              <Typography>{items.info}</Typography>
-              <Typography>{items.desc}</Typography>
-              <Typography>{items.order}</Typography>
+            <Grid key={index} m={6}>
+              <Typography
+                sx={{
+                  color: " #061237",
+                  fontFamily: "Inter",
+                  fontSize: "37px",
+                  fontStyle: "normal",
+                  fontWeight: 700,
+                  lineHeight: "48px" /* 200% */,
+                  margin: 1,
+                }}
+              >
+                {items.info}
+              </Typography>
+              <Typography
+                sx={{
+                  color: " #061237",
+                  fontFamily: "Inter",
+                  fontSize: "16px",
+                  fontStyle: "normal",
+                  fontWeight: 700,
+                  lineHeight: "32px" /* 200% */,
+                  margin: 1,
+                }}
+              >
+                {items.desc}
+              </Typography>
+              <Typography
+                sx={{
+                  color: " #67718E",
+                  fontFamily: "Inter",
+                  fontSize: "16px",
+                  fontStyle: "normal",
+                  fontWeight: 700,
+                  lineHeight: "32px" /* 200% */,
+                  margin: 1,
+                }}
+              >
+                {items.order}
+              </Typography>
             </Grid>
           ))}
         </Stack>
       </Box>
-      <Box sx={{ background: "black" }}>Divider</Box>
     </>
   );
 }

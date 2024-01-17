@@ -27,13 +27,13 @@ function Section5() {
       <Box
         sx={{
           background: "#061237",
-          height: "600px",
+          height: "650px",
           justifyContent: "center",
         }}
       >
         <Box
           display={{ xs: "contents", md: "flex" }}
-          justifyContent={"space-around"}
+          justifyContent={"space-evenly"}
           mb={4}
         >
           <Typography
@@ -44,66 +44,66 @@ function Section5() {
               fontStyle: "normal",
               fontWeight: 700,
               lineHeight: "56px" /* 200% */,
-              letterSpacing: "1.5px",
+              letterSpacing: "0.5px",
               margin: 1,
               mt: 5,
+              mb: 5,
             }}
           >
             Ways to work with us
           </Typography>
-          <Button variant="contained" sx={{ mt: 5 }}>
+          <Button variant="contained" sx={{ mt: 5, mb: 5, mr: 15 }}>
             Get Started
           </Button>
         </Box>
-        <Stack
-          direction={{ xs: "column", md: "row" }}
-          spacing={1}
-          sx={{ justifyContent: "center" }}
-          width={"100%"}
-        >
-          {Blog.map((items, index) => (
-            <Grid key={index}>
-              <Box ml={20}>
-                <img
-                  src={items.image}
-                  alt={items.title}
-                  style={{ width: "50%", marginLeft: "5%" }}
-                />
+        <Box display={"flex"} justifyContent={"center"}>
+          <Stack
+            direction={{ xs: "column", md: "row" }}
+            spacing={1}
+            width={"70%"}
+          >
+            {Blog.map((items, index) => (
+              <Grid container key={index}>
+                <Box>
+                  <img
+                    src={items.image}
+                    alt={items.title}
+                    style={{ width: "80%" }}
+                  />
 
-                <Typography
-                  width={"100%"}
-                  sx={{
-                    color: " #FFF",
-                    fontFamily: "Inter",
-                    fontSize: "16px",
-                    fontStyle: "normal",
-                    fontWeight: 700,
-                    lineHeight: "20 px" /* 200% */,
-                    letterSpacing: "1.5px",
-                    margin: 1,
-                  }}
-                >
-                  {items.header}
-                </Typography>
-                <Typography
-                  width={"50%"}
-                  sx={{
-                    color: " #B6BCCE",
-                    fontFamily: "Inter",
-                    fontSize: "12px",
-                    fontStyle: "normal",
-                    fontWeight: 700,
-                    lineHeight: "25px" /* 200% */,
-                    letterSpacing: "1.5px",
-                    margin: 1,
-                  }}
-                >
-                  {items.desc}
-                </Typography>
-              </Box>
-            </Grid>
-          ))}
-        </Stack>
+                  <Typography
+                    width={"60%"}
+                    sx={{
+                      color: " #FFF",
+                      fontFamily: "Inter",
+                      fontSize: "16px",
+                      fontStyle: "normal",
+                      fontWeight: 700,
+                      lineHeight: "20 px" /* 200% */,
+                      letterSpacing: "1.5px",
+                    }}
+                  >
+                    {items.header}
+                  </Typography>
+                  <Typography
+                    width={"90%"}
+                    sx={{
+                      color: " #B6BCCE",
+                      fontFamily: "Inter",
+                      fontSize: "11px",
+                      fontStyle: "normal",
+                      fontWeight: 700,
+                      lineHeight: "25px" /* 200% */,
+                      letterSpacing: "1.0px",
+                    }}
+                  >
+                    {items.desc}
+                  </Typography>
+                </Box>
+              </Grid>
+            ))}
+          </Stack>
+        </Box>
       </Box>
     </>
   );

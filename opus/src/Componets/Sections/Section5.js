@@ -28,7 +28,7 @@ function Section5() {
   ];
   return (
     <>
-      <Box margin={5}>
+      <Box margin={5} ml={15} sx={{ width: "80%", height: "680px" }}>
         <Box display={"flex"} justifyContent={"space-between"}>
           <Typography
             sx={{
@@ -38,7 +38,7 @@ function Section5() {
               fontStyle: "normal",
               fontWeight: 700,
               lineHeight: "56px" /* 200% */,
-              letterSpacing: "1.5px",
+              letterSpacing: "1px",
 
               margin: 1,
               marginLeft: 10,
@@ -54,14 +54,14 @@ function Section5() {
           direction={{ xs: "column", md: "row" }}
           spacing={1}
           margin={4}
-          justifyContent={"space-around"}
+          justifyContent={"space-between"}
         >
           {Article.map((items, index) => (
             <Grid key={index}>
               <img
                 src={items.image}
                 alt={items.title}
-                style={{ margin: 2, width: "60%", height: "50%" }}
+                style={{ margin: 2, width: "70%", height: "70%" }}
               />
               <Typography
                 sx={{
@@ -71,7 +71,7 @@ function Section5() {
                   fontStyle: "normal",
                   fontWeight: 700,
                   lineHeight: "25px" /* 200% */,
-                  letterSpacing: "1.5px",
+                  letterSpacing: "1px",
 
                   width: "60%",
                 }}
@@ -86,9 +86,9 @@ function Section5() {
                   fontStyle: "normal",
                   fontWeight: 700,
                   lineHeight: "20px" /* 200% */,
-                  letterSpacing: "1.5px",
+                  letterSpacing: "1px",
 
-                  width: "50%",
+                  width: "60%",
                 }}
               >
                 {items.desc}
@@ -96,7 +96,11 @@ function Section5() {
               <Button
                 variant="contained"
                 size="medium"
-                sx={{ color: "rgba(247, 249, 252, 1)", marginTop: 5 }}
+                sx={{
+                  color: "black",
+                  marginTop: 3,
+                  background: "#F7F9FC",
+                }}
               >
                 {items.button}
               </Button>

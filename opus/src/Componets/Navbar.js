@@ -18,7 +18,7 @@ function Navbar() {
   return (
     <>
       <Box>
-        <AppBar position="fixed" sx={{ background: "transparent" }}>
+        <AppBar position="fixed">
           <Toolbar
             sx={{ justifyContent: { xs: "space-between", md: "space-around" } }}
           >
