@@ -1,24 +1,14 @@
-import {
-  AppBar,
-  Box,
-  Button,
-  Grid,
-  IconButton,
-  Menu,
-  MenuItem,
-  Stack,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
 import React from "react";
 import MenuIcon from "@mui/icons-material/Menu";
+import Logo from "../Componets/Images/Logo.svg";
+import { Link } from "react-router-dom";
 
 function Navbar() {
-  const Pages = ["Overview", "Pages", "Template"];
   return (
     <>
       <Box>
-        <AppBar position="fixed">
+        <AppBar position="fixed" sx={{ background: "transparent" }}>
           <Toolbar
             sx={{ justifyContent: { xs: "space-between", md: "space-around" } }}
           >
@@ -27,8 +17,9 @@ function Navbar() {
                 display: { xs: "flex", md: "flex" },
               }}
             >
-              <img src="" alt="" />
-              <Typography>Opus</Typography>
+              <Link to="/">
+                <img src={Logo} alt="logo" />
+              </Link>
             </Box>
             <Box
               sx={{
@@ -37,18 +28,46 @@ function Navbar() {
                 justifyContent: "space-around",
               }}
             >
-              {Pages.map((items, index) => (
-                <Stack key={index}>
-                  <Typography>{items}</Typography>
-                </Stack>
-              ))}
+              <Box
+                sx={{ display: "contents", justifyContent: "space-between" }}
+              >
+                <Typography variant="h6">
+                  <Link
+                    to="/overview"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    Overview
+                  </Link>
+                </Typography>
+                <Typography variant="h6">
+                  <Link
+                    to="/pages"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    Pages
+                  </Link>
+                </Typography>
+                <Typography variant="h6">
+                  <Link
+                    to="/templates"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    Templates
+                  </Link>
+                </Typography>
+              </Box>
             </Box>
             <Box
               sx={{
                 display: { xs: "none", md: "flex" },
               }}
             >
-              <Button sx={{ color: "white" }}>Contact Us</Button>
+              <Button
+                variant="contained"
+                sx={{ color: "white", background: "#1355FF" }}
+              >
+                Contact Us
+              </Button>
             </Box>
             <MenuIcon sx={{ display: { md: "none" } }} />
           </Toolbar>

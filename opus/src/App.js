@@ -1,27 +1,22 @@
-import { Box } from "@mui/material";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Overview from "./Componets/Pages/Overview.js";
+import Pages from "./Componets/Pages/Pages.js";
+import Templates from "./Componets/Pages/Templates.js";
+import Home from "./Componets/Pages/Home.js";
 import Navbar from "./Componets/Navbar.js";
-import Footer from "./Componets/Footer.js";
-
-import Section1 from "./Componets/Sections/Section1.js";
-import Section2 from "./Componets/Sections/Section2.js";
-import Section3 from "./Componets/Sections/Section3.js";
-import Section4 from "./Componets/Sections/Section4.js";
-import Section5 from "./Componets/Sections/Section5.js";
 
 function App() {
   return (
     <>
-      <Box>
+      <BrowserRouter>
         <Navbar />
-        <Box>
-          <Section1 />
-          <Section2 />
-          <Section3 />
-          <Section4 />
-          <Section5 />
-        </Box>
-        <Footer />
-      </Box>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/overview" element={<Overview />} />
+          <Route path="/pages" element={<Pages />} />
+          <Route path="/templates" element={<Templates />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

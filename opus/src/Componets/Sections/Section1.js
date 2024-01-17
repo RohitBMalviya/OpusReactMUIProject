@@ -47,7 +47,15 @@ function Section1() {
   ];
   return (
     <>
-      <Box sx={{ background: "rgba(24, 38, 78, 1)", height: "600px", mt: 8 }}>
+      <Box
+        sx={{
+          background: "rgba(24, 38, 78, 1)",
+          height: "600px",
+
+          mt: 8,
+          mb: 12,
+        }}
+      >
         <Box display={"flex"} sx={{ m: 5 }}>
           <Box sx={{ width: "50%" }}>
             <Typography
@@ -122,8 +130,23 @@ function Section1() {
             </Box>
           </Box>
           <Box>
-            <img src={Image4} alt="image" />
-            <Box sx={{ display: "contents", justifyContent: "center" }}>
+            <img
+              src={Image4}
+              alt="image"
+              style={{ position: "relative", width: "90%", marginTop: "25%" }}
+            />
+
+            <Box
+              sx={{
+                top: "0px",
+                background: "white",
+                width: "15%",
+                left: "60%",
+                position: "absolute",
+                top: " 70%",
+                p: 5,
+              }}
+            >
               <Typography
                 sx={{
                   color: " #37456C",
@@ -133,7 +156,7 @@ function Section1() {
                   fontWeight: 700,
                   lineHeight: "25px" /* 200% */,
                   margin: 1,
-                  width: "30%",
+                  width: "100%",
                 }}
               >
                 I felt like I couldn’t grow until I moved to Opus. Now I am
@@ -148,7 +171,7 @@ function Section1() {
                   fontWeight: 700,
                   lineHeight: "32px" /* 200% */,
                   margin: 1,
-                  width: "40%",
+                  width: "80%",
                 }}
               >
                 Frank Dublin
