@@ -1,21 +1,25 @@
 import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 import image3 from "../Images/Image3.png";
+import ImageDesc from "../Reused/ImageDesc";
 function Section5() {
   const Blog = [
     {
+      id: 1,
       image: image3,
       title: "Image",
       header: "Project Management",
       desc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget consectetur eros. Aliquam erat volutpat.",
     },
     {
+      id: 2,
       image: image3,
       title: "Image",
       header: "Advanced Analytics",
       desc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget consectetur eros. Aliquam erat volutpat.",
     },
     {
+      id: 3,
       image: image3,
       title: "Image",
       header: "Marketing & Dashboard",
@@ -62,45 +66,14 @@ function Section5() {
             spacing={1}
             width={"70%"}
           >
-            {Blog.map((items, index) => (
-              <Grid container key={index}>
-                <Box>
-                  <img
-                    src={items.image}
-                    alt={items.title}
-                    style={{ width: "80%" }}
-                  />
-
-                  <Typography
-                    width={"60%"}
-                    sx={{
-                      color: " #FFF",
-                      fontFamily: "Inter",
-                      fontSize: "16px",
-                      fontStyle: "normal",
-                      fontWeight: 700,
-                      lineHeight: "20 px" /* 200% */,
-                      letterSpacing: "1.5px",
-                    }}
-                  >
-                    {items.header}
-                  </Typography>
-                  <Typography
-                    width={"90%"}
-                    sx={{
-                      color: " #B6BCCE",
-                      fontFamily: "Inter",
-                      fontSize: "11px",
-                      fontStyle: "normal",
-                      fontWeight: 700,
-                      lineHeight: "25px" /* 200% */,
-                      letterSpacing: "1.0px",
-                    }}
-                  >
-                    {items.desc}
-                  </Typography>
-                </Box>
-              </Grid>
+            {Blog.map((item, index) => (
+              <ImageDesc
+                key={item.id}
+                images={item.image}
+                titles={item.title}
+                headers={item.header}
+                descs={item.desc}
+              />
             ))}
           </Stack>
         </Box>

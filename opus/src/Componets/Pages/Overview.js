@@ -1,7 +1,12 @@
+import { Box } from "@mui/material";
 import React from "react";
 
 function Overview() {
-  return <div>Overview</div>;
+  return (
+    <>
+      <Box>Overview</Box>
+    </>
+  );
 }
 
 export default Overview;

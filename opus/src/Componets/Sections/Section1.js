@@ -1,4 +1,4 @@
-import { Box, Grid, IconButton, Stack, Typography } from "@mui/material";
+import { Box, Grid, IconButton, Typography } from "@mui/material";
 import React from "react";
 import Logo3 from "../Images/Logo3.svg";
 import Logo4 from "../Images/Logo4.svg";
@@ -7,39 +7,49 @@ import Logo6 from "../Images/Logo6.svg";
 import { Button } from "antd";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Image4 from "../Images/Image4.png";
-
+import Info from "../Reused/Info";
+import Logo from "../Reused/Logo";
 function Section1() {
-  const Logo = [
+  const Logos = [
     {
-      Logo: Logo3,
+      id: 1,
+      logo: Logo3,
     },
     {
-      Logo: Logo4,
+      id: 2,
+      logo: Logo4,
     },
     {
-      Logo: Logo5,
+      id: 3,
+      logo: Logo5,
     },
     {
-      Logo: Logo6,
+      id: 4,
+      logo: Logo6,
     },
   ];
-  const Info = [
+
+  const Infos = [
     {
+      id: 1,
       info: "99.95%",
       desc: "Accuracy Rate",
       order: "in fulfilling orders",
     },
     {
+      id: 2,
       info: "5,000+",
       desc: "Ecommerce businesses",
       order: "partner with Opus",
     },
     {
+      id: 3,
       info: "99.96%",
       desc: "Of orders ship on time",
       order: "within SLA",
     },
     {
+      id: 4,
       info: "#1",
       desc: "Best Fulfillment Technology",
       order: "by AdWeek’s Retail Awards",
@@ -51,13 +61,10 @@ function Section1() {
         sx={{
           background: "rgba(24, 38, 78, 1)",
           height: "600px",
-
-          mt: 8,
-          mb: 12,
         }}
       >
-        <Box display={"flex"} sx={{ m: 5 }}>
-          <Box sx={{ width: "50%" }}>
+        <Box display={"flex"}>
+          <Box sx={{ width: "50%", margin: 5 }}>
             <Typography
               sx={{
                 color: " #FFF",
@@ -138,7 +145,6 @@ function Section1() {
 
             <Box
               sx={{
-                top: "0px",
                 background: "white",
                 width: "15%",
                 left: "60%",
@@ -209,58 +215,21 @@ function Section1() {
         >
           Trusted and loved by the world<sup>'</sup>s best teams
         </Typography>
-        <Stack direction={{ xs: "column", md: "row" }}>
-          {Logo.map((items, index) => (
-            <Grid key={index}>
-              <img src={items.Logo} alt="logo" />
-            </Grid>
+        <Box display={"flex"}>
+          {Logos.map((item, index) => (
+            <Logo key={item.id} logo={item.logo} />
           ))}
-        </Stack>
-        <Stack direction={{ xs: "column", md: "row" }}>
-          {Info.map((items, index) => (
-            <Grid key={index} m={6}>
-              <Typography
-                sx={{
-                  color: " #061237",
-                  fontFamily: "Inter",
-                  fontSize: "37px",
-                  fontStyle: "normal",
-                  fontWeight: 700,
-                  lineHeight: "48px" /* 200% */,
-                  margin: 1,
-                }}
-              >
-                {items.info}
-              </Typography>
-              <Typography
-                sx={{
-                  color: " #061237",
-                  fontFamily: "Inter",
-                  fontSize: "16px",
-                  fontStyle: "normal",
-                  fontWeight: 700,
-                  lineHeight: "32px" /* 200% */,
-                  margin: 1,
-                }}
-              >
-                {items.desc}
-              </Typography>
-              <Typography
-                sx={{
-                  color: " #67718E",
-                  fontFamily: "Inter",
-                  fontSize: "16px",
-                  fontStyle: "normal",
-                  fontWeight: 700,
-                  lineHeight: "32px" /* 200% */,
-                  margin: 1,
-                }}
-              >
-                {items.order}
-              </Typography>
-            </Grid>
+        </Box>
+        <Box display={"flex"}>
+          {Infos.map((item, index) => (
+            <Info
+              key={item.id}
+              info={item.info}
+              desc={item.desc}
+              order={item.order}
+            />
           ))}
-        </Stack>
+        </Box>
       </Box>
     </>
   );
